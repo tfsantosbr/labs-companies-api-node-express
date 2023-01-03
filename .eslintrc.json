@@ -6,10 +6,13 @@
   },
   "extends": [
     "plugin:@typescript-eslint/recommended",
-    "standard-with-typescript"
+    "standard-with-typescript",
+    "prettier",
+    "plugin:prettier/recommended"
   ],
   "plugins": [
-    "eslint-plugin-import-helpers"
+    "eslint-plugin-import-helpers",
+    "prettier"
   ],
   "overrides": [],
   "parserOptions": {
@@ -17,6 +20,7 @@
     "sourceType": "module"
   },
   "rules": {
+    "prettier/prettier": "error",
     "camelcase": "off",
     "import/no-unresolved": "error",
     "@typescript-eslint/naming-convention": [
