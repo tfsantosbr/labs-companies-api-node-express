@@ -9,4 +9,8 @@ export class CompleteName {
 
   public get firstName() { return this._firstName; }
   public get lastName() { return this._lastName; }
+
+  public toString(): string {
+    return `${this.firstName} ${this.lastName}`;
+  }
 }

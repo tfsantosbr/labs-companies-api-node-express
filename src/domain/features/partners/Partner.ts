@@ -7,7 +7,7 @@ export class Partner {
     private _completeName: CompleteName;
     private _email: Email;
 
-    constructor(completeName: CompleteName, email: Email, id: string = null) {
+    constructor(completeName: CompleteName, email: Email, id: string | null = null) {
         this._id = id ?? uuid();
         this._completeName = completeName;
         this._email = email;
