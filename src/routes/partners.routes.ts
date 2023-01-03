@@ -8,21 +8,21 @@ const partnerRoutes = Router();
 const partners: Partner[] = []
 
 partnerRoutes.post('/', (request, response) => {
-    const { firstName, lastName, email } = request.body;
+  const { firstName, lastName, email } = request.body;
 
-    const partner = new Partner(
-        new CompleteName(firstName, lastName),
-        new Email(email),
-    );
+  const partner = new Partner(
+    new CompleteName(firstName, lastName),
+    new Email(email),
+  );
 
-    console.log(partner.id);
-    console.log(partner.email.address);
-    console.log(partner.completeName.firstName);
-    console.log(partner.completeName.lastName);
+  console.log(partner.id);
+  console.log(partner.email.address);
+  console.log(partner.completeName.firstName);
+  console.log(partner.completeName.lastName);
 
-    partners.push(partner);
+  partners.push(partner);
 
-    return response.status(201).send(partner);
+  return response.status(201).send(partner);
 })
 
 export { partnerRoutes };

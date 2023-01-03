@@ -1,9 +1,9 @@
 export class Email {
-    private _address: string;
+  private _address: string;
 
-    constructor(address: string) {
-        this._address = address
-    }
+  constructor(address: string) {
+    this._address = address
+  }
 
-    get address() { return this._address; }
+  get address() { return this._address; }
 }
